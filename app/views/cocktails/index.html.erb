@@ -3,11 +3,10 @@
 </div>
 
 
-<div class="boxes">
+<div class="boxes boxes-wrap">
   <% @cocktails.each do |c|%>
-      <div class="box">
-          <img class="img" src="https://source.unsplash.com/collection/1631542">
-          <h2><%#= c.name%></h2>
+      <div class="box-card">
+    <%= link_to link_to image_tag("https://source.unsplash.com/collection/1631542"), cocktail_path(c) %>
     <%= link_to c.name, cocktail_path(c), class: 'link' %>
       </div>
   <% end%>  

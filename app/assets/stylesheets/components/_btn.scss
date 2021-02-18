@@ -15,6 +15,17 @@
   }
 }
 
-.btn-center {
-  text-align: center;
+.btn-outline {
+  text-decoration:none;
+  color: $action;
+  border-radius: 50px;
+  border: 1px solid $action;
+  padding: 0.25rem 0.75rem;
+
+  &:hover {
+    background-color: $action;
+    font-weight: 400;
+    color: $white;
+    text-decoration:none;
+  }
 }

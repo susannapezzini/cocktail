@@ -4,6 +4,10 @@
   background-color: $white;
   margin: 0 auto;
   padding: 2rem;
+  &-solo {
+    padding-top: 5.5rem;
+    height: 100%;
+  }
 }
 
 .box {
@@ -18,19 +22,35 @@
     object-fit: cover;
   }
 
-  & h2 {
+  & .link {
     color: $white;
     position: absolute;
     right: 10%;
     bottom: 10%;
+    text-decoration: none;
+    font-family: $headers-font;
+    font-size: 2rem;
+    &:hover {
+
+    text-decoration: none;
+    }
   }
 }
 
 .details {
   padding: 1rem;
+
+  & h3 {
+    color: $action;
+  }
 }
 
 .title {
-  margin-top: 2rem;
+  // margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.strong {
+  font-weight: 600;
+  // color: $action;
 }

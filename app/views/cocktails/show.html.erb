@@ -1,13 +1,21 @@
-https://source.unsplash.com/collection/1631542
-<div class="boxes">
-  <h1 class="title"> Hello I am a cocktail!</h1>
+
+<div class="boxes boxes-solo">
+  <h1 class="title">Details</h1>
 
   <div class="box">
     <img class="img" src="https://source.unsplash.com/collection/1631542">
     <div class="details">
       <h3><%= @cocktail.name%></h3>
-      <p><%= @cocktail.ingredients%></p>
-      <p><%= @cocktail.doses%></p>
+          <% @cocktail.doses.each do |d|%>
+            <div>
+                <p><span class="strong">Ingredient: </span><%= d.ingredient.name %></p>
+                <p><span class="strong">Dose: </span><%= d.description %></p>
+                <div>
+                  <%= link_to 'Delete', cocktail_dose_path(cocktail_id: @cocktail, id: d), method: :delete,  class: 'btn-outline', data: { confirm: 'are yousure?' } %>
+                </div>
+            </div>
+          <%end%> 
+      <%= link_to 'Add new dose', new_cocktail_dose_path(@cocktail), class: 'btn' %>
     </div>
   </div>
     

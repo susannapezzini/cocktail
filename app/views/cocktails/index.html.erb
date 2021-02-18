@@ -5,9 +5,11 @@
 
 <div class="boxes boxes-wrap">
   <% @cocktails.each do |c|%>
-      <div class="box-card">
-    <%= link_to link_to image_tag("https://source.unsplash.com/collection/1631542"), cocktail_path(c) %>
-    <%= link_to c.name, cocktail_path(c), class: 'link' %>
+
+      <div class="box-card" id="cocktail-<%= c.id%>">
+        <%#= link_to link_to image_tag("https://source.unsplash.com/collection/1631542"), cocktail_path(c) %>
+        <%= link_to c.name, cocktail_path(c), class: 'link' %>
       </div>
+
   <% end%>  
 </div>

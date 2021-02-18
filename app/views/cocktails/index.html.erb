@@ -1,0 +1,15 @@
+<div class="banner">
+  <h1>Welcome to Mister Cocktails</h1>
+  <p>search for cocktail</p>
+</div>
+
+
+<div class="boxes">
+  <% @cocktails.each do |c|%>
+    <% link_to cocktail_path(c) %>
+      <div class="box">
+          <img class="img" src="https://source.unsplash.com/collection/1631542">
+          <h2><%= c.name%></h2>
+      </div>
+  <% end%>  
+</div>

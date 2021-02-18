@@ -6,13 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "creating 20 ingredients"
+puts "creating 60 ingredients"
 
 Ingredient.destroy_all
 
 20.times do
   puts "."
+  Ingredient.create(name: Faker::Food.fruits)
+end
+
+20.times do
+  puts "."
   Ingredient.create(name: Faker::Food.ingredient)
+end
+
+20.times do
+  puts "."
+  Ingredient.create(name: Faker::Food.spice)
 end
 
 puts "done!"

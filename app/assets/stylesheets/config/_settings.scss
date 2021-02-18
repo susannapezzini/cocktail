@@ -1,0 +1,22 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $neutral;
+  font-family: $body-font;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

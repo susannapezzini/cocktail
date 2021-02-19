@@ -9,7 +9,7 @@
       <h3>Ingredients:</h3>
           <% @cocktail.doses.each do |d|%>
             <div class="dose">
-              <div>
+              <div class="dose-text">
                   <p><span class="strong">Ingredient: </span><%= d.ingredient.name %></p>
                   <p><span class="strong">Dose: </span><%= d.description %></p>
               </div>

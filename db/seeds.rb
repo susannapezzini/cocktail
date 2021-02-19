@@ -5,24 +5,44 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'json'
+require 'open-uri'
+filepath = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 
-puts "creating 60 ingredients"
+serialized_ingredients = open(filepath).read
+ingredients = JSON.parse(serialized_ingredients)
 
-Ingredient.destroy_all
+default_ingredients = ingredients['drinks']
 
-20.times do
-  puts "."
-  Ingredient.create(name: Faker::Food.fruits)
-end
+puts "creating Ingredients"
 
-20.times do
-  puts "."
-  Ingredient.create(name: Faker::Food.ingredient)
-end
-
-20.times do
-  puts "."
-  Ingredient.create(name: Faker::Food.spice)
+default_ingredients.each do |i|
+  Ingredient.create(name: i['strIngredient1'])
 end
 
 puts "done!"
+
+puts Ingredient.all
+
+Rails.env.development? do 
+  puts "creating 60 ingredients"
+
+  Ingredient.destroy_all
+
+  20.times do
+    puts "."
+    Ingredient.create(name: Faker::Food.fruits)
+  end
+
+  20.times do
+    puts "."
+    Ingredient.create(name: Faker::Food.ingredient)
+  end
+
+  20.times do
+    puts "."
+    Ingredient.create(name: Faker::Food.spice)
+  end
+
+  puts "done!"
+end

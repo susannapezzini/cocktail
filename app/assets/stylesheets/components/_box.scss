@@ -45,12 +45,12 @@
   width: 100%;
   bottom: 0;
   transition: height 0.5s ease-out;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.2) 100%);
   }
   &:hover:before {
     height: 100%;
   }
-  & .link {
+  & h2 {
   position: absolute;
   bottom: 10%;
   right: 10%;

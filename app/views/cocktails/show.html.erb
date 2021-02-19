@@ -5,7 +5,7 @@
   <div class="box">
     <img class="img" src="https://source.unsplash.com/collection/1631542">
     <div class="details">
-      <h3>Doses:</h3>
+      <h3>Ingredients:</h3>
           <% @cocktail.doses.each do |d|%>
             <div class="dose">
               <div>
@@ -17,7 +17,7 @@
               </div>
             </div>
           <%end%> 
-      <%= link_to 'Add new dose', new_cocktail_dose_path(@cocktail), class: 'btn-outline' %>
+      <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: 'btn-outline' %>
     </div>
   </div>
 </div>

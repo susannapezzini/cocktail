@@ -24,6 +24,10 @@ puts "done!"
 
 puts Ingredient.all
 
+# puts "destroying cocktails"
+# Cocktail.destroy_all
+
+
 Rails.env.development? do 
   puts "creating 60 ingredients"
 

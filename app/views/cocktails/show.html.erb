@@ -4,7 +4,7 @@
 
   <div class="box">
 
-    <%= cl_image_tag @cocktail.photo.key, class: 'img' %>
+    <%= cocktail_image_path(@cocktail) %>
     <div class="details">
       <h3>Ingredients:</h3>
           <% @cocktail.doses.each do |d|%>

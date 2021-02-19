@@ -10,7 +10,7 @@
   <% @cocktails.each do |c|%>
 
     <%= link_to cocktail_path(c) do %>
-      <div class="box-card" id="cocktail-<%= c.id%>" style="background-image: url('<%= cl_image_path c.photo.key %>')">
+      <div class="box-card" id="cocktail-<%= c.id%>" style="background-image: url('<%= cocktail_asset_path(c) %>')">
         <%#= link_to link_to image_tag("https://source.unsplash.com/collection/1631542"), cocktail_path(c) %>
        <h2><%= c.name%></h2>
       </div>

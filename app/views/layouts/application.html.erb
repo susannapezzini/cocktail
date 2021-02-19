@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+    <title>MisterCocktail</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,5 +19,20 @@
       </ul>
     </div>
     <%= yield %>
+    <footer>
+
+      <div class="icons"
+        <%= link_to 'https://github.com/susannapezzini' , target: 'blank' do %>
+          <i class="fab fa-github"></i>
+        <% end %>
+        <%= link_to 'https://www.instagram.com/susanna_pezzini/' , target: 'blank' do %>
+          <i class="fab fa-instagram"></i>
+        <% end %>
+      </div>
+      <svg height="3" width="100">
+        <line x1="0" y1="0" x2="100" y2="0"  />
+      </svg>
+      <p>Made by <span>Susanna Pezzini<span></p>
+    </footer>
   </body>
 </html>

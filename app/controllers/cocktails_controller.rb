@@ -26,7 +26,7 @@ class CocktailsController < ApplicationController
   end
 
   private
-  
+
   def find_cocktail
     @cocktail = Cocktail.find(params[:id])
   end

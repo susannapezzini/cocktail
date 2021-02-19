@@ -1,9 +1,12 @@
 <div class="boxes boxes-solo">
-  <h1><%= @cocktail.name%></h1>
 
-  <%= simple_form_for [@cocktail,@dose] do |f| %>
-    <%= f.association :ingredient %>
-    <%= f.input :description %>
-    <%= f.button :submit %>
-  <% end %>
+  <div class="form-container">
+    <h2><%= @cocktail.name%></h2>
+
+    <%= simple_form_for [@cocktail,@dose] do |f| %>
+      <%= f.association :ingredient %>
+      <%= f.input :description %>
+      <%= f.button :submit , class: 'text-center' %>
+    <% end %>
+  </div>
 </div>

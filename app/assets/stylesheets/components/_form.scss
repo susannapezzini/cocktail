@@ -1,11 +1,27 @@
 .simple_form {
   font-weight: 300;
   color: $gray;
-  height: 80vh;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #cocktail_photo {
   font-weight: 200;
   color: lightgray;
   font-size: 0.75rem;
+}
+
+.form-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  h2 {
+    margin: 0 auto 1rem auto;
+  }
+}
+
+.text-center {
+  text-align: center;
 }

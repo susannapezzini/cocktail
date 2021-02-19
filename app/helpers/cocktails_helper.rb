@@ -2,7 +2,7 @@ module CocktailsHelper
 
   def cocktail_image_path(cocktail, options = {})
     if cocktail.photo.attached?
-      cl_image_tag(cocktail.photo.key)
+      cl_image_tag(cocktail.photo.key, options)
     else
       # cl_image_path('cocktail_placeholder')
       image_tag 'bg.jpg', options

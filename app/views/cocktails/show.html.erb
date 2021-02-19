@@ -4,7 +4,7 @@
 
   <div class="box">
 
-    <%= cocktail_image_path(@cocktail), class: 'img' %>
+    <%= cocktail_image_path(@cocktail, class: 'img') %>
     <div class="details">
       <h3>Ingredients:</h3>
           <% @cocktail.doses.each do |d|%>

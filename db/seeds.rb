@@ -14,6 +14,8 @@ ingredients = JSON.parse(serialized_ingredients)
 
 default_ingredients = ingredients['drinks']
 
+Cocktail.destroy_all
+
 puts "creating Ingredients"
 
 default_ingredients.each do |i|

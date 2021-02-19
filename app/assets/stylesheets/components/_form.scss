@@ -17,8 +17,9 @@
   flex-direction: column;
   justify-content: center;
   // align-items: center;
-  h2 {
+  & h2 {
     margin: 0 auto 1rem auto;
+    width: 50%;
   }
 }
 

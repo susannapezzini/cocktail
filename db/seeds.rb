@@ -25,6 +25,7 @@ end
 puts "done!"
 
 puts Ingredient.all
+puts Cocktail.all
 
 # puts "destroying cocktails"
 # Cocktail.destroy_all
